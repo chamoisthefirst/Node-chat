@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title id="title">Chat</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <!--div id="css">
+            <link rel="stylesheet" type="text/css" href="darkmode.css">
+        </div-->
+    </head>
+    <body>
+        <div id="chat">
+            <header id="header">
+
+            </header>
+            <div id="channels">
+
+            </div>
+            <div id="text">
+                <div id="messages">
+
+                </div>
+                <div id="inputs">
+                    <textarea id="input" dropzone="copy"></textarea>
+                </div>
+                <datalist id="commands">
+                    <option>/calc [num,operator,num] - calculate</option>
+                     <option>/help - command list</option>
+                     <option>/rot [message] - shift cypher</option>
+                     <option>/say [message] - make the bot say something</option>
+                     <option>/time - see what time it is</option>
+                </datalist>
+            </div>
+            <div id="right">
+                <div id="menu"></div>
+                <div id="settings_button">
+                    <button id="settings_control" class="setting_button" onClick="openSettings()"><p class="setting_word">settings</p></button>
+                </div>
+                
+                <div id="settings" class="hidden">
+                    <input class="setting_box"  type="checkbox"id="theme" onClick="changeTheme()"><p class="setting_word">Light mode</p>
+                    <br><br>
+                    <input class="setting_box"  type="checkbox"id="autoscroll" onClick="switchAutoscroll()" ><p class="setting_word">autoscroll</p>
+                    <br><br>
+                    <button class="setting_button" id="logout" onClick="logout()"><h3>Log out</h3></button><br>
+                </div>
+            </div>
+        </div>
+        <script src="socket.js"></script>
+        <!--script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script-->
+        <script src="public.js"></script>
+    </body>
+</html>
